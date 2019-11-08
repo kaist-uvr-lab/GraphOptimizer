@@ -18,6 +18,7 @@ namespace GraphOptimizer {
 	class Optimizer {
 	public:
 		Optimizer();
+		Optimizer(bool _bSchur);
 		virtual ~Optimizer();
 		//void AddVertex(Vertex* pVertex);
 		void AddVertex(Vertex* pVertex, bool bType = true);
@@ -44,6 +45,7 @@ namespace GraphOptimizer {
 	class GNOptimizer : public Optimizer {
 	public:
 		GNOptimizer();
+		GNOptimizer(bool _bSchur);
 		virtual ~GNOptimizer();
 		void Optimize(int trial, int level, bool bShowStatus);
 	private:
@@ -55,6 +57,7 @@ namespace GraphOptimizer {
 	class LMOptimizer : public Optimizer {
 	public:
 		LMOptimizer();
+		LMOptimizer(bool _bSchur);
 		virtual ~LMOptimizer();
 		void Optimize(int trial, int level, bool bShowStatus);
 	private:

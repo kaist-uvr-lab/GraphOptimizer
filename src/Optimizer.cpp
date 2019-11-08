@@ -3,12 +3,15 @@
 #include <Vertex.h>
 
 GraphOptimizer::Optimizer::Optimizer():bSchur(false){}
+GraphOptimizer::Optimizer::Optimizer(bool _bSchur) : bSchur(_bSchur) {}
 GraphOptimizer::Optimizer::~Optimizer(){}
 
-GraphOptimizer::GNOptimizer::GNOptimizer():Optimizer(){}
+GraphOptimizer::GNOptimizer::GNOptimizer():Optimizer(false){}
+GraphOptimizer::GNOptimizer::GNOptimizer(bool _bSchur) : Optimizer(_bSchur) {}
 GraphOptimizer::GNOptimizer::~GNOptimizer() {}
 
-GraphOptimizer::LMOptimizer::LMOptimizer():damping(1.0), Optimizer() {}
+GraphOptimizer::LMOptimizer::LMOptimizer():damping(1.0), Optimizer(false) {}
+GraphOptimizer::LMOptimizer::LMOptimizer(bool _bSchur) : damping(1.0), Optimizer(_bSchur) {}
 GraphOptimizer::LMOptimizer::~LMOptimizer() {}
 
 //void GraphOptimizer::Optimizer::AddVertex(Vertex* pVertex) {

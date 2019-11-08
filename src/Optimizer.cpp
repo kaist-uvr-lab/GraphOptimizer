@@ -284,7 +284,6 @@ void GraphOptimizer::GNOptimizer::SolveProblem() {
 
 void GraphOptimizer::LMOptimizer::SolveProblem() {
 	if (mnBlockHessianIdx2 > 0) {
-		std::cout << "Index ::" << mnBlockHessianIdx1 << ", " << mnBlockHessianIdx2 << "::" << mnBlockVertexIdx << std::endl;
 		Haa = Eigen::MatrixXd::Zero(mnBlockHessianIdx1, mnBlockHessianIdx1);
 		Hab = Eigen::MatrixXd::Zero(mnBlockHessianIdx1, mnBlockHessianIdx2);
 		Hbb = Eigen::MatrixXd::Zero(mnBlockHessianIdx2, mnBlockHessianIdx2);

@@ -59,7 +59,7 @@ namespace GraphOptimizer {
 	public:
 		
 		virtual void SetParam() = 0;
-		virtual void UpdateParam() = 0;
+		virtual void UpdateParam();
 		virtual void RestoreData() = 0;
 		virtual void* GetPointer() = 0;
 		virtual void Accept();
